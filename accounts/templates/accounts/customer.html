@@ -5,8 +5,8 @@
 <style>
     form{
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 20px;
     }
     label {
         display: inline-block;
@@ -63,6 +63,7 @@
                 <table class="table table-sm">
                     <tr>
                         <th>Product</th>
+                        <th>Note</th>
                         <th>Category</th>
                         <th>Date Ordered</th>
                         <th>Status</th>
@@ -72,6 +73,7 @@
                     {% for order in orders %}
                     <tr>
                         <td>{{order.product}}</td>
+                        <td>{{order.note}}</td>
                         <td>{{order.product.category}}</td>
                         <td>{{order.date_created}}</td>
                         <td>{{order.status}}</td>

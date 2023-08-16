@@ -58,7 +58,7 @@ def createCustomer(request):
             form.save()
             return redirect('/')
     context = {'form': form}
-    return render(request, 'accounts/order_form.html', context)
+    return render(request, 'accounts/update_form.html', context)
 
 def updateOrder(request, pk):
     orders = Order.objects.get(id = pk)
